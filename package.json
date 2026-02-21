@@ -1,6 +1,6 @@
 {
   "name": "nodejs-kitsw",
-  "type":"module",
+  "type": "module",
   "version": "1.0.0",
   "main": "index1.js",
   "scripts": {
@@ -19,6 +19,7 @@
   "homepage": "https://github.com/nairx/nodejs-kitsw#readme",
   "description": "",
   "dependencies": {
+    "bcrypt": "^6.0.0",
     "express": "^5.2.1"
   }
 }
