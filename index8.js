@@ -9,3 +9,8 @@ const users = [
 app.get("/", (req, res) => {
   res.json(users);
 });
+app.get("/:id", (req, res) => {
+  const id = Number(req.params.id)
+  const result = users.find((user) => user.id === id);
+  res.json(result);
+});
