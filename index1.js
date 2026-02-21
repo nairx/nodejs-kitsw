@@ -10,3 +10,6 @@ app.get("/",(req,res)=>{
 app.get("/home",(req,res)=>{
     res.send("This is home API")
 })
+app.get("/users",(req,res)=>{
+    res.send("This is users list")
+})
