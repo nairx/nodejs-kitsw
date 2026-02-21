@@ -14,3 +14,8 @@ const id = req.params.id
 const name = req.params.name
 res.send(id+name)
 })
+app.get("/id/:id/name/:name",(req,res)=>{
+const id = req.params.id
+const name = req.params.name
+res.send(id+name)
+})
