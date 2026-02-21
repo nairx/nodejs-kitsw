@@ -1,0 +1,24 @@
+{
+  "name": "nodejs-kitsw",
+  "type":"module",
+  "version": "1.0.0",
+  "main": "index1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nairx/nodejs-kitsw.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nairx/nodejs-kitsw/issues"
+  },
+  "homepage": "https://github.com/nairx/nodejs-kitsw#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
