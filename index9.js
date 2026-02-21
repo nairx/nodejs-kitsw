@@ -7,22 +7,23 @@ let users = [];
 app.get("/", (req, res) => {
   res.send("Hello World");
 });
-
 app.post("/signup", async (req, res) => {
   const user = req.body;
   const hashedPwd = await bcrypt.hash(req.body.password, 10);
-  user.password = hashedPwd
+  user.password = hashedPwd;
   users.push(user);
   res.json(users);
 });
-
-app.post("/login", (req, res) => {
+app.post("/login", async (req, res) => {
   const { email, password } = req.body;
-  const found = users.find(
-    (user) => user.email === email && user.password === password,
-  );
+  const found = users.find((user) => user.email === email);
   if (found) {
-    res.send("Hello " + found.name);
+    const validate = await bcrypt.compare(password, found.password);
+    if (validate) {
+      res.send("Hello " + found.name);
+    } else {
+      res.send("Invalid Password");
+    }
   } else {
     res.send("User not found");
   }
