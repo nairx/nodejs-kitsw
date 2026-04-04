@@ -1,12 +1,10 @@
-//database > mydb27
-//collection > users (name,email)
-//localhost:8080/users
-//POST Method  {name:"Mike",email:"mike@gmail.com"}
 import express from "express";
 import mongoose from "mongoose";
+import cors from "cors"
 const app = express();
 app.use(express.json())
-app.listen(8080);
+app.use(cors())
+app.listen(8080,()=>console.log("Sever Started"));
 mongoose.connect("mongodb://localhost:27017/mydb27");
 const userSchema = mongoose.Schema({
   name: { type: String },
